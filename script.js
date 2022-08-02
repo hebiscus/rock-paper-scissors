@@ -31,5 +31,13 @@ function oneRound(playerSelection, computerSelection) {
 
 const playerSelection = player.toLowerCase();
 const computerSelection = getComputerChoice();
-console.log(oneRound(playerSelection, computerSelection));
+/* console.log(oneRound(playerSelection, computerSelection)); */
 
+function game() {
+    let i = oneRound(playerSelection, computerSelection);
+    for (i = 1; i <= 5; i++) {
+        console.log(oneRound(playerSelection, computerSelection));
+    }
+}
+
+console.log(game())
