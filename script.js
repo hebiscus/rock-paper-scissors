@@ -1,14 +1,12 @@
 function getComputerChoice() {
     let choices = ['Rock', 'Paper', 'Scissors'];
-    return choices[Math.floor(Math.random()*choices.length)].toLowerCase()
+    return choices[Math.floor(Math.random()*choices.length)].toLowerCase();
 }
 
 function getPlayerChoice() {
     let player = prompt ("Choose your weapon");
     return player.toLowerCase();
 }
-
-/* let player = prompt ("This is a prompt box"); */
 
 function playRound(playerSelection, computerSelection) {
     if (playerSelection == 'rock' & computerSelection == 'rock') {
@@ -30,22 +28,21 @@ function playRound(playerSelection, computerSelection) {
     } else if (playerSelection == 'scissors' & computerSelection == 'rock') {
         return "Computer wins!";
     } else {
-        return "Unavailable weapon"
+        return "Unavailable weapon";
     }
 }
 
-score = "That's a tie" || "Player wins!" || "Computer wins!";
-
 const playerSelection = getPlayerChoice();
 const computerSelection = getComputerChoice();
- console.log(playRound(playerSelection, computerSelection)); 
+/* console.log(playRound(playerSelection, computerSelection)); */
  
 
 function game() {
      for (i = 1; i <= 5; i++) {
-        getPlayerChoice();
-        getComputerChoice();
-        playRound(playerSelection, computerSelection)
+       /* getPlayerChoice(); */
+        const playerSelection = getPlayerChoice();
+       /* getComputerChoice(); */
+        const computerSelection = getComputerChoice();
        console.log(playRound(playerSelection, computerSelection));
     } 
 
