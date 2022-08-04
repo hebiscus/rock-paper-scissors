@@ -1,2 +1,2 @@
-# rock-paper-scissors
-TOP project: Rock Paper Scissors
+# Odin Project - Rock Paper Scissors
+played in console for now! 
