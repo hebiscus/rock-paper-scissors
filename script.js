@@ -8,11 +8,8 @@ function getPlayerChoice() {
     return player.toLowerCase();
 }
 
-
-
 function playRound(playerSelection, computerSelection) {
     if (playerSelection == 'rock' & computerSelection == 'rock') {
-        i -= 1;
         return "That's a tie!";
     } else if (playerSelection == 'rock' & computerSelection == 'scissors') {
         playerScore += 1;
@@ -21,7 +18,6 @@ function playRound(playerSelection, computerSelection) {
         computerScore += 1;
         return "Computer wins!";
     } else if (playerSelection == 'paper' & computerSelection == 'paper') {
-        i -= 1;
         return "That's a tie!";
     } else if (playerSelection == 'paper' & computerSelection == 'rock') {
         playerScore += 1;
@@ -30,7 +26,6 @@ function playRound(playerSelection, computerSelection) {
         computerScore += 1;
         return "Computer wins!";
     } else if (playerSelection == 'scissors' & computerSelection == 'scissors') {
-        i -= 1;
         return "That's a tie!";
     } else if (playerSelection == 'scissors' & computerSelection == 'paper') {
         playerScore += 1;
@@ -42,10 +37,6 @@ function playRound(playerSelection, computerSelection) {
         return "Unavailable weapon";
     }
 }
-
-const playerSelection = getPlayerChoice();
-const computerSelection = getComputerChoice();
-/* console.log(playRound(playerSelection, computerSelection)); */
  
 let playerScore = 0;
 let computerScore = 0;
@@ -55,8 +46,6 @@ function game() {
         const playerSelection = getPlayerChoice();
         const computerSelection = getComputerChoice();
        console.log(playRound(playerSelection, computerSelection));
-    
-
     } 
     if (playerScore > computerScore) {
         return "Player has won the whole game!";
@@ -67,6 +56,5 @@ function game() {
     } else 
         return "Uhoh, seems like you picked an unavailable weapon every round"; 
     }
-
 
 console.log(game());
