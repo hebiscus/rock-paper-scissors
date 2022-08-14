@@ -3,10 +3,8 @@ function getComputerChoice() {
     return choices[Math.floor(Math.random()*choices.length)].toLowerCase();
 }
 
-function getPlayerChoice() {
-    let player = prompt ("Choose your weapon");
-    return player.toLowerCase();
-}
+const computerSelection = getComputerChoice();
+const playerSelection = playerChoice();
 
 function playRound(playerSelection, computerSelection) {
     if (playerSelection == 'rock' & computerSelection == 'rock') {
@@ -37,24 +35,49 @@ function playRound(playerSelection, computerSelection) {
         return "Unavailable weapon";
     }
 }
- 
-let playerScore = 0;
-let computerScore = 0;
 
-function game() {
-     for (i = 1; i <= 5; i++) {
-        const playerSelection = getPlayerChoice();
-        const computerSelection = getComputerChoice();
-       console.log(playRound(playerSelection, computerSelection));
-    } 
-    if (playerScore > computerScore) {
-        return "Player has won the whole game!";
-    } else if (computerScore > playerScore) {
-        return "Computer has won the whole game!";
-    } else if (computerScore == playerScore) {
-        return "Game is tied!";
-    } else 
-        return "Uhoh, seems like you picked an unavailable weapon every round"; 
+function playerChoice () {
+    if (document.getElementById == "rockButton") {
+        return 'rock';
+    } else if (document.getElementById == "paperButton") {
+        return 'paper';
+    } else {
+        return 'scissors'
     }
+}
 
-console.log(game());
+document.getElementById("rockButton").addEventListener("click", playerChoice);
+document.getElementById("rockButton").addEventListener("click", playRound);
+document.getElementById("paperButton").addEventListener("click", playerChoice);
+document.getElementById("paperButton").addEventListener("click", playRound);
+document.getElementById("scissorsButton").addEventListener("click", playerChoice);
+document.getElementById("scissorsButton").addEventListener("click", playRound);
+
+
+
+
+// let playerScore = 0;
+// let computerScore = 0;
+
+// function getPlayerChoice() {
+//     let player = prompt ("Choose your weapon");
+//     return player.toLowerCase();
+// }
+
+// function game() {
+//      for (i = 1; i <= 5; i++) {
+//         const playerSelection = getPlayerChoice();
+//         const computerSelection = getComputerChoice();
+//        console.log(playRound(playerSelection, computerSelection));
+//     } 
+//     if (playerScore > computerScore) {
+//         return "Player has won the whole game!";
+//     } else if (computerScore > playerScore) {
+//         return "Computer has won the whole game!";
+//     } else if (computerScore & playerScore == 0) {
+//         return "damn you didn't even play :(";
+//    /* } else if (computerScore == playerScore) {
+//         return "Game is tied!"; */
+//     } else 
+//         return "Seems like game is tied!"; 
+//     }
