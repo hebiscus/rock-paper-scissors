@@ -9,31 +9,31 @@ const computerSelection = getComputerChoice();
 
 function playRound(playerSelection, computerSelection) {
     if (playerSelection == 'rock' & computerSelection == 'rock') {
-        document.getElementById("roundScore").innerHTML = " " + "That's a tie!";
+        document.getElementById("roundScore").innerHTML = " " + "That's a tie!" + " " + `${playerScore}` + ":" +`${computerScore}`;
     } else if (playerSelection == 'rock' & computerSelection == 'scissors') {
         playerScore += 1;
-        document.getElementById("roundScore").innerHTML = "Player wins!";
+        document.getElementById("roundScore").innerHTML = "Player wins!" + " " + `${playerScore}` + ":" + `${computerScore}`;
     } else if (playerSelection == 'rock' & computerSelection == 'paper') {
         computerScore += 1;
-        document.getElementById("roundScore").innerHTML = " " + "Computer wins!";
+        document.getElementById("roundScore").innerHTML = " " + "Computer wins!" + " " + `${playerScore}` + ":" + `${computerScore}`;
     } else if (playerSelection == 'paper' & computerSelection == 'paper') {
-        document.getElementById("roundScore").innerHTML = " " + "That's a tie!";
+        document.getElementById("roundScore").innerHTML = " " + "That's a tie!" + " " + `${playerScore}` + ":" + `${computerScore}`;
     } else if (playerSelection == 'paper' & computerSelection == 'rock') {
         playerScore += 1;
-        document.getElementById("roundScore").innerHTML = " " + "Player wins!";
+        document.getElementById("roundScore").innerHTML = " " + "Player wins!" + " " + `${playerScore}` + ":" + `${computerScore}`;
     } else if (playerSelection == 'paper' & computerSelection == 'scissors') {
         computerScore += 1;
-        document.getElementById("roundScore").innerHTML = " " + "Computer wins!";
+        document.getElementById("roundScore").innerHTML = " " + "Computer wins!" + " " + `${playerScore}` + ":" + `${computerScore}`;
     } else if (playerSelection == 'scissors' & computerSelection == 'scissors') {
-        document.getElementById("roundScore").innerHTML = " " + "That's a tie!";
+        document.getElementById("roundScore").innerHTML = " " + "That's a tie!" + " " + `${playerScore}` + ":" + `${computerScore}`;
     } else if (playerSelection == 'scissors' & computerSelection == 'paper') {
         playerScore += 1;
-        document.getElementById("roundScore").innerHTML =  " " + "Player wins!";
+        document.getElementById("roundScore").innerHTML =  " " + "Player wins!" + " " + `${playerScore}` + ":" + `${computerScore}`;
     } else if (playerSelection == 'scissors' & computerSelection == 'rock') {
         computerScore += 1;        
-        document.getElementById("roundScore").innerHTML = " " + "Computer wins!";
+        document.getElementById("roundScore").innerHTML = " " + "Computer wins!" + " " + `${playerScore}` + ":" + `${computerScore}`;
     } else {
-        document.getElementById("roundScore").innerHTML = " " + "Computer wins!";
+        document.getElementById("roundScore").innerHTML = " " + "Computer wins!" + " " + `${playerScore}` + ":" + `${computerScore}`;
     }
 }
 
