@@ -1,5 +1,7 @@
 # Odin Project - Rock Paper Scissors
-Tools used: JavaScript, HTML, CSS
+Tools used: JavaScript, HTML, CSS.
+<p>What I learned during this project: working with git branches, DOM manipulation.</p>
+
 ## Live preview:
 https://hebiscus.github.io/rock-paper-scissors/
 ## What could be improved:
